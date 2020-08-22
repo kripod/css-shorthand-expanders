@@ -1,4 +1,4 @@
-import type { PropertiesFallback } from "csstype";
+import type { Properties, PropertiesFallback } from "csstype";
 
 type WithFallbacks<T> = {
 	[key in keyof T]: T[key] | T[key][];
@@ -13,3 +13,6 @@ export type CSSProperties = Required<
 			blockEllipsis?: "none" | "auto" | (string & {});
 		}>
 >;
+
+export type CSSPropertiesWithValues<T extends Properties> = T &
+	Pick<Properties, Extract<keyof T, keyof Properties>>;

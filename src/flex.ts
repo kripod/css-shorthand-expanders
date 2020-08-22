@@ -4,11 +4,7 @@ export function flex(
 	grow: CSSProperties["flexGrow"],
 	shrink: CSSProperties["flexShrink"] = 1,
 	basis: CSSProperties["flexBasis"] = 0,
-): {
-	flexGrow: CSSProperties["flexGrow"];
-	flexShrink: CSSProperties["flexShrink"];
-	flexBasis: CSSProperties["flexBasis"];
-} {
+): Pick<CSSProperties, "flexGrow" | "flexShrink" | "flexBasis"> {
 	return {
 		flexGrow: grow,
 		flexShrink: shrink,
