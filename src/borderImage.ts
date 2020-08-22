@@ -1,32 +1,21 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export type BorderImageLonghands<
-	Source extends CSSProperties["borderImageSource"],
-	Slice extends CSSProperties["borderImageSlice"] = "100%",
-	Width extends CSSProperties["borderImageWidth"] = 1,
-	Outset extends CSSProperties["borderImageOutset"] = 0,
-	Repeat extends CSSProperties["borderImageRepeat"] = "stretch"
-> = {
-	borderImageSource: Source;
-	borderImageSlice: Slice;
-	borderImageWidth: Width;
-	borderImageOutset: Outset;
-	borderImageRepeat: Repeat;
-};
+export type BorderImageLonghands = Pick<
+	CSSProperties,
+	| "borderImageSource"
+	| "borderImageSlice"
+	| "borderImageWidth"
+	| "borderImageOutset"
+	| "borderImageRepeat"
+>;
 
-export function borderImage<
-	Source extends CSSProperties["borderImageSource"],
-	Slice extends CSSProperties["borderImageSlice"] = "100%",
-	Width extends CSSProperties["borderImageWidth"] = 1,
-	Outset extends CSSProperties["borderImageOutset"] = 0,
-	Repeat extends CSSProperties["borderImageRepeat"] = "stretch"
->(
-	source: Source,
-	slice: Slice = "100%" as Slice,
-	width: Width = 1 as Width,
-	outset: Outset = 0 as Outset,
-	repeat: Repeat = "stretch" as Repeat,
-): BorderImageLonghands<Source, Slice, Width, Outset, Repeat> {
+export function borderImage(
+	source: CSSProperties["borderImageSource"],
+	slice: CSSProperties["borderImageSlice"] = "100%",
+	width: CSSProperties["borderImageWidth"] = 1,
+	outset: CSSProperties["borderImageOutset"] = 0,
+	repeat: CSSProperties["borderImageRepeat"] = "stretch",
+): BorderImageLonghands {
 	return {
 		borderImageSource: source,
 		borderImageSlice: slice,

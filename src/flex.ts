@@ -1,17 +1,13 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export function flex<
-	Grow extends CSSProperties["flexGrow"],
-	Shrink extends CSSProperties["flexShrink"] = 1,
-	Basis extends CSSProperties["flexBasis"] = 0
->(
-	grow: Grow,
-	shrink: Shrink = (1 as unknown) as Shrink,
-	basis: Basis = 0 as Basis,
+export function flex(
+	grow: CSSProperties["flexGrow"],
+	shrink: CSSProperties["flexShrink"] = 1,
+	basis: CSSProperties["flexBasis"] = 0,
 ): {
-	flexGrow: Grow;
-	flexShrink: Shrink;
-	flexBasis: Basis;
+	flexGrow: CSSProperties["flexGrow"];
+	flexShrink: CSSProperties["flexShrink"];
+	flexBasis: CSSProperties["flexBasis"];
 } {
 	return {
 		flexGrow: grow,

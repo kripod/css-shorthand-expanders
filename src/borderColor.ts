@@ -1,38 +1,34 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export type BorderColorLonghands<
-	T extends CSSProperties["borderTopColor"] = CSSProperties["borderTopColor"],
-	R extends CSSProperties["borderRightColor"] = T,
-	B extends CSSProperties["borderBottomColor"] = T,
-	L extends CSSProperties["borderLeftColor"] = R
-> = {
-	borderTopColor: T;
-	borderRightColor: R;
-	borderBottomColor: B;
-	borderLeftColor: L;
-};
+export type BorderColorLonghands = Pick<
+	CSSProperties,
+	| "borderTopColor"
+	| "borderRightColor"
+	| "borderBottomColor"
+	| "borderLeftColor"
+>;
 
-export function borderColor<T extends CSSProperties["borderTopColor"]>(
-	all: T,
-): BorderColorLonghands<T>;
+export function borderColor(
+	all: CSSProperties["borderTopColor"],
+): BorderColorLonghands;
 
-export function borderColor<
-	T extends CSSProperties["borderTopColor"],
-	R extends CSSProperties["borderRightColor"]
->(vertical: T, horizontal: R): BorderColorLonghands<T, R>;
+export function borderColor(
+	vertical: CSSProperties["borderTopColor"],
+	horizontal: CSSProperties["borderRightColor"],
+): BorderColorLonghands;
 
-export function borderColor<
-	T extends CSSProperties["borderTopColor"],
-	R extends CSSProperties["borderRightColor"],
-	B extends CSSProperties["borderBottomColor"]
->(top: T, horizontal: R, bottom: B): BorderColorLonghands<T, R, B>;
+export function borderColor(
+	top: CSSProperties["borderTopColor"],
+	horizontal: CSSProperties["borderRightColor"],
+	bottom: CSSProperties["borderBottomColor"],
+): BorderColorLonghands;
 
-export function borderColor<
-	T extends CSSProperties["borderTopColor"],
-	R extends CSSProperties["borderRightColor"],
-	B extends CSSProperties["borderBottomColor"],
-	L extends CSSProperties["borderLeftColor"]
->(top: T, right: R, bottom: B, left: L): BorderColorLonghands<T, R, B, L>;
+export function borderColor(
+	top: CSSProperties["borderTopColor"],
+	right: CSSProperties["borderRightColor"],
+	bottom: CSSProperties["borderBottomColor"],
+	left: CSSProperties["borderLeftColor"],
+): BorderColorLonghands;
 
 export function borderColor(
 	top: CSSProperties["borderTopColor"],

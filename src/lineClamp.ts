@@ -1,19 +1,16 @@
-import { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "./CSSProperties";
 
-export function lineClamp<
-	MaxLines extends CSSProperties["maxLines"],
-	BlockEllipsis extends CSSProperties["blockEllipsis"] = "auto"
->(
-	maxLines: MaxLines,
-	blockEllipsis: BlockEllipsis = "auto" as BlockEllipsis,
+export function lineClamp(
+	maxLines: CSSProperties["maxLines"],
+	blockEllipsis: CSSProperties["blockEllipsis"] = "auto",
 ): {
-	maxLines: MaxLines;
+	maxLines: CSSProperties["maxLines"];
+	blockEllipsis: CSSProperties["blockEllipsis"];
 	continue: "discard";
-	blockEllipsis: BlockEllipsis;
 } {
 	return {
 		maxLines,
-		continue: "discard",
 		blockEllipsis,
+		continue: "discard",
 	};
 }

@@ -1,38 +1,29 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export type MarginLonghands<
-	T extends CSSProperties["marginTop"] = CSSProperties["marginTop"],
-	R extends CSSProperties["marginRight"] = T,
-	B extends CSSProperties["marginBottom"] = T,
-	L extends CSSProperties["marginLeft"] = R
-> = {
-	marginTop: T;
-	marginRight: R;
-	marginBottom: B;
-	marginLeft: L;
-};
+export type MarginLonghands = Pick<
+	CSSProperties,
+	"marginTop" | "marginRight" | "marginBottom" | "marginLeft"
+>;
 
-export function margin<T extends CSSProperties["marginTop"]>(
-	all: T,
-): MarginLonghands<T>;
+export function margin(all: CSSProperties["marginTop"]): MarginLonghands;
 
-export function margin<
-	T extends CSSProperties["marginTop"],
-	R extends CSSProperties["marginRight"]
->(vertical: T, horizontal: R): MarginLonghands<T, R>;
+export function margin(
+	vertical: CSSProperties["marginTop"],
+	horizontal: CSSProperties["marginRight"],
+): MarginLonghands;
 
-export function margin<
-	T extends CSSProperties["marginTop"],
-	R extends CSSProperties["marginRight"],
-	B extends CSSProperties["marginBottom"]
->(top: T, horizontal: R, bottom: B): MarginLonghands<T, R, B>;
+export function margin(
+	top: CSSProperties["marginTop"],
+	horizontal: CSSProperties["marginRight"],
+	bottom: CSSProperties["marginBottom"],
+): MarginLonghands;
 
-export function margin<
-	T extends CSSProperties["marginTop"],
-	R extends CSSProperties["marginRight"],
-	B extends CSSProperties["marginBottom"],
-	L extends CSSProperties["marginLeft"]
->(top: T, right: R, bottom: B, left: L): MarginLonghands<T, R, B, L>;
+export function margin(
+	top: CSSProperties["marginTop"],
+	right: CSSProperties["marginRight"],
+	bottom: CSSProperties["marginBottom"],
+	left: CSSProperties["marginLeft"],
+): MarginLonghands;
 
 export function margin(
 	top: CSSProperties["marginTop"],

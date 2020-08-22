@@ -1,14 +1,11 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export function gap<
-	RowGap extends CSSProperties["rowGap"],
-	ColumnGap extends CSSProperties["columnGap"] = RowGap
->(
-	rowGap: RowGap,
-	columnGap: ColumnGap = (rowGap as unknown) as ColumnGap,
+export function gap(
+	rowGap: CSSProperties["rowGap"],
+	columnGap: CSSProperties["columnGap"] = rowGap,
 ): {
-	rowGap: RowGap;
-	columnGap: ColumnGap;
+	rowGap: CSSProperties["rowGap"];
+	columnGap: CSSProperties["columnGap"];
 } {
 	return {
 		rowGap,

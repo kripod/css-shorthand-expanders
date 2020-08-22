@@ -1,17 +1,13 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export function listStyle<
-	Position extends CSSProperties["listStylePosition"],
-	Image extends CSSProperties["listStyleImage"] = "none",
-	Type extends CSSProperties["listStyleType"] = "disc"
->(
-	position: Position,
-	image: Image = "none" as Image,
-	type: Type = "disc" as Type,
+export function listStyle(
+	position: CSSProperties["listStylePosition"],
+	image: CSSProperties["listStyleImage"] = "none",
+	type: CSSProperties["listStyleType"] = "disc",
 ): {
-	listStylePosition: Position;
-	listStyleImage: Image;
-	listStyleType: Type;
+	listStylePosition: CSSProperties["listStylePosition"];
+	listStyleImage: CSSProperties["listStyleImage"];
+	listStyleType: CSSProperties["listStyleType"];
 } {
 	return {
 		listStylePosition: position,

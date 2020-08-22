@@ -1,14 +1,11 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export function placeContent<
-	Align extends CSSProperties["alignContent"],
-	Justify extends CSSProperties["justifyContent"] = Align
->(
-	align: Align,
-	justify: Justify = (align as unknown) as Justify,
+export function placeContent(
+	align: CSSProperties["alignContent"],
+	justify: CSSProperties["justifyContent"] = align,
 ): {
-	alignContent: Align;
-	justifyContent: Justify;
+	alignContent: CSSProperties["alignContent"];
+	justifyContent: CSSProperties["justifyContent"];
 } {
 	return {
 		alignContent: align,

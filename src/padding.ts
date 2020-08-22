@@ -1,38 +1,29 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export type PaddingLonghands<
-	T extends CSSProperties["paddingTop"] = CSSProperties["paddingTop"],
-	R extends CSSProperties["paddingRight"] = T,
-	B extends CSSProperties["paddingBottom"] = T,
-	L extends CSSProperties["paddingLeft"] = R
-> = {
-	paddingTop: T;
-	paddingRight: R;
-	paddingBottom: B;
-	paddingLeft: L;
-};
+export type PaddingLonghands = Pick<
+	CSSProperties,
+	"paddingTop" | "paddingRight" | "paddingBottom" | "paddingLeft"
+>;
 
-export function padding<T extends CSSProperties["paddingTop"]>(
-	all: T,
-): PaddingLonghands<T>;
+export function padding(all: CSSProperties["paddingTop"]): PaddingLonghands;
 
-export function padding<
-	T extends CSSProperties["paddingTop"],
-	R extends CSSProperties["paddingRight"]
->(vertical: T, horizontal: R): PaddingLonghands<T, R>;
+export function padding(
+	vertical: CSSProperties["paddingTop"],
+	horizontal: CSSProperties["paddingRight"],
+): PaddingLonghands;
 
-export function padding<
-	T extends CSSProperties["paddingTop"],
-	R extends CSSProperties["paddingRight"],
-	B extends CSSProperties["paddingBottom"]
->(top: T, horizontal: R, bottom: B): PaddingLonghands<T, R, B>;
+export function padding(
+	top: CSSProperties["paddingTop"],
+	horizontal: CSSProperties["paddingRight"],
+	bottom: CSSProperties["paddingBottom"],
+): PaddingLonghands;
 
-export function padding<
-	T extends CSSProperties["paddingTop"],
-	R extends CSSProperties["paddingRight"],
-	B extends CSSProperties["paddingBottom"],
-	L extends CSSProperties["paddingLeft"]
->(top: T, right: R, bottom: B, left: L): PaddingLonghands<T, R, B, L>;
+export function padding(
+	top: CSSProperties["paddingTop"],
+	right: CSSProperties["paddingRight"],
+	bottom: CSSProperties["paddingBottom"],
+	left: CSSProperties["paddingLeft"],
+): PaddingLonghands;
 
 export function padding(
 	top: CSSProperties["paddingTop"],

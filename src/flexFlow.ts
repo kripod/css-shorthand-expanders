@@ -1,14 +1,11 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export function flexFlow<
-	Direction extends CSSProperties["flexDirection"],
-	Wrap extends CSSProperties["flexWrap"] = "nowrap"
->(
-	direction: Direction,
-	wrap: Wrap = "nowrap" as Wrap,
+export function flexFlow(
+	direction: CSSProperties["flexDirection"],
+	wrap: CSSProperties["flexWrap"] = "nowrap",
 ): {
-	flexDirection: Direction;
-	flexWrap: Wrap;
+	flexDirection: CSSProperties["flexDirection"];
+	flexWrap: CSSProperties["flexWrap"];
 } {
 	return {
 		flexDirection: direction,

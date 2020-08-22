@@ -1,14 +1,11 @@
 import type { CSSProperties } from "./CSSProperties";
 
-export function overflow<
-	X extends CSSProperties["overflowX"],
-	Y extends CSSProperties["overflowY"] = X
->(
-	x: X,
-	y: Y = (x as unknown) as Y,
+export function overflow(
+	x: CSSProperties["overflowX"],
+	y: CSSProperties["overflowY"] = x,
 ): {
-	overflowX: X;
-	overflowY: Y;
+	overflowX: CSSProperties["overflowX"];
+	overflowY: CSSProperties["overflowY"];
 } {
 	return {
 		overflowX: x,
