@@ -8,19 +8,19 @@ import { borderStyle, BorderStyleLonghands } from "./borderStyle";
 import { borderWidth, BorderWidthLonghands } from "./borderWidth";
 
 export type BorderLonghands = BorderWidthLonghands &
-	BorderStyleLonghands &
 	BorderColorLonghands &
+	BorderStyleLonghands &
 	BorderImageLonghandsWithInitialValues;
 
 export function border(
 	width: NonNullable<CSSProperties["borderTopWidth"]>,
-	style: NonNullable<CSSProperties["borderTopStyle"]> = "none",
 	color: NonNullable<CSSProperties["borderTopColor"]> = "currentcolor",
+	style: NonNullable<CSSProperties["borderTopStyle"]> = "none",
 ): BorderLonghands {
 	return {
 		...borderWidth(width),
-		...borderStyle(style),
 		...borderColor(color),
+		...borderStyle(style),
 		...(borderImage("none") as BorderImageLonghandsWithInitialValues),
 	};
 }

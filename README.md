@@ -8,7 +8,7 @@ CSS rules can be represented as plain JavaScript objects. While every property [
 
 Usually, sub-properties of a shorthand may be specified in any order. This imposes an overhead on developers and type systems alike. Consequently, shorthands without a fixed order syntax should be avoided.
 
-For shorthands with a single canonical value order, typed methods with positional arguments can be defined. This project aims to provide those in the form of self-contained functions.
+For shorthands with a reasonable value order, typed methods with positional arguments can be defined. This project aims to provide those in the form of self-contained functions.
 
 ## Usage
 

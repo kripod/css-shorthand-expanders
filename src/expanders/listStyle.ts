@@ -1,17 +1,17 @@
 import type { CSSProperties } from "../CSSProperties";
 
 export type ListStyleLonghands = Required<
-	Pick<CSSProperties, "listStylePosition" | "listStyleImage" | "listStyleType">
+	Pick<CSSProperties, "listStyleType" | "listStyleImage" | "listStylePosition">
 >;
 
 export function listStyle(
-	position: NonNullable<CSSProperties["listStylePosition"]>,
+	type: NonNullable<CSSProperties["listStyleType"]>,
 	image: NonNullable<CSSProperties["listStyleImage"]> = "none",
-	type: NonNullable<CSSProperties["listStyleType"]> = "disc",
+	position: NonNullable<CSSProperties["listStylePosition"]> = "outside",
 ): ListStyleLonghands {
 	return {
-		listStylePosition: position,
-		listStyleImage: image,
 		listStyleType: type,
+		listStyleImage: image,
+		listStylePosition: position,
 	};
 }
