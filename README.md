@@ -70,6 +70,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`placeContent`](./src/expanders/placeContent.ts)
 - [`placeItems`](./src/expanders/placeItems.ts)
 - [`placeSelf`](./src/expanders/placeSelf.ts)
+- [`textDecoration`](./src/expanders/textDecoration.ts)
 
 _More functions are under construction. Follow along for updates or [contribute](./CONTRIBUTING.md) to the project!_
 

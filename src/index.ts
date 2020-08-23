@@ -19,3 +19,4 @@ export { padding } from "./expanders/padding";
 export { placeContent } from "./expanders/placeContent";
 export { placeItems } from "./expanders/placeItems";
 export { placeSelf } from "./expanders/placeSelf";
+export { textDecoration } from "./expanders/textDecoration";
