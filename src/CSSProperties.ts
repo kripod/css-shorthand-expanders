@@ -5,7 +5,7 @@ export interface CSSProperties {
 	[key: string]: any;
 }
 
-export type CSSPropertiesWithValues<T extends StandardLonghandProperties> = T &
+export type CSSPropertiesWithValues<T extends CSSProperties> = T &
 	Pick<
 		StandardLonghandProperties,
 		Extract<keyof T, keyof StandardLonghandProperties>
