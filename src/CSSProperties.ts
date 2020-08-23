@@ -1,7 +1,8 @@
 import type { Properties } from "csstype";
 
 export interface CSSProperties {
-	[key: string]: string | number;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	[key: string]: any;
 }
 
 export type CSSPropertiesWithValues<T extends Properties> = T &
