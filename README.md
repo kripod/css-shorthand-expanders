@@ -12,7 +12,7 @@ For shorthands with a single canonical value order, typed methods with positiona
 
 ## Usage
 
-Install the library and its peer dependency with your package manager, e.g.:
+Install the library and its peer dependency with a package manager, e.g. npm:
 
 ```shell
 npm install css-shorthand-expanders csstype
