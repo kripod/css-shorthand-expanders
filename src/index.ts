@@ -12,6 +12,7 @@ export { inset } from "./expanders/inset";
 export { lineClamp } from "./expanders/lineClamp";
 export { listStyle } from "./expanders/listStyle";
 export { margin } from "./expanders/margin";
+export { outline } from "./expanders/outline";
 export { overflow } from "./expanders/overflow";
 export { padding } from "./expanders/padding";
 export { placeContent } from "./expanders/placeContent";

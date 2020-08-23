@@ -63,6 +63,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`lineClamp`](./src/expanders/lineClamp.ts)
 - [`listStyle`](./src/expanders/listStyle.ts)
 - [`margin`](./src/expanders/margin.ts)
+- [`outline`](./src/expanders/outline.ts)
 - [`overflow`](./src/expanders/overflow.ts)
 - [`padding`](./src/expanders/padding.ts)
 - [`placeContent`](./src/expanders/placeContent.ts)
@@ -81,4 +82,5 @@ The project adheres to the behavior of shorthands as [specified by _CSS Cascadin
 
 Parameters of expanders are in a fallback-oriented order to embrace [progressive enhancement](https://developer.mozilla.org/docs/Glossary/Progressive_Enhancement). Defaults are mostly identical to the initial values of sub-properties, except for:
 
-- `border` – The style defaults to `"solid"` (instead of `"none"`)
+- `border` – Style defaults to `"solid"` (instead of `"none"`)
+- `outline` – Style defaults to `"solid"` (instead of `"none"`), and color defaults to `"currentcolor"` (instead of `["currentcolor", "invert"]`)
