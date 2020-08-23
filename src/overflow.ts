@@ -1,4 +1,4 @@
-import type { CSSProperties } from "css-shorthand-expanders";
+import type { CSSProperties } from "./CSSProperties";
 
 export type OverflowLonghands = Required<
 	Pick<CSSProperties, "overflowX" | "overflowY">

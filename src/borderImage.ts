@@ -1,6 +1,4 @@
-import type { CSSProperties } from "css-shorthand-expanders";
-
-import type { CSSPropertiesWithValues } from "./CSSProperties";
+import type { CSSProperties, CSSPropertiesWithValues } from "./CSSProperties";
 
 export type BorderImageLonghandsWithInitialValues = CSSPropertiesWithValues<{
 	borderImageSource: "none";

@@ -1,4 +1,4 @@
-import type { CSSProperties } from "css-shorthand-expanders";
+import type { CSSProperties } from "./CSSProperties";
 
 export type FlexFlowLonghands = Required<
 	Pick<CSSProperties, "flexDirection" | "flexWrap">
