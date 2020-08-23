@@ -78,3 +78,7 @@ The project adheres to the behavior of shorthands as [specified by _CSS Cascadin
 > Some properties are shorthand properties, meaning that they allow authors to specify the values of several properties with a single property. **A shorthand property sets all of its longhand sub-properties, exactly as if expanded in place.**
 >
 > When values are omitted from a shorthand form, unless otherwise defined, **each “missing” sub-property is assigned its initial value.**
+
+Parameters of expanders are in a fallback-oriented order to embrace [progressive enhancement](https://developer.mozilla.org/docs/Glossary/Progressive_Enhancement). Defaults are mostly identical to the initial values of sub-properties, except for:
+
+- `border` – The style defaults to `"solid"` (instead of `"none"`)
