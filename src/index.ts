@@ -21,3 +21,4 @@ export { placeItems } from "./expanders/placeItems";
 export { placeSelf } from "./expanders/placeSelf";
 export { textDecoration } from "./expanders/textDecoration";
 export { textEmphasis } from "./expanders/textEmphasis";
+export { transition } from "./expanders/transition";

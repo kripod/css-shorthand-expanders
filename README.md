@@ -72,6 +72,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`placeSelf`](./src/expanders/placeSelf.ts)
 - [`textDecoration`](./src/expanders/textDecoration.ts)
 - [`textEmphasis`](./src/expanders/textEmphasis.ts)
+- [`transition`](./src/expanders/transition.ts)
 
 _More functions are under construction. Follow along for updates or [contribute](./CONTRIBUTING.md) to the project!_
 
