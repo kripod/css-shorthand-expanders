@@ -59,6 +59,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`flex`](./src/expanders/flex.ts)
 - [`flexFlow`](./src/expanders/flexFlow.ts)
 - [`gap`](./src/expanders/gap.ts)
+- [`inset`](./src/expanders/inset.ts)
 - [`lineClamp`](./src/expanders/lineClamp.ts)
 - [`listStyle`](./src/expanders/listStyle.ts)
 - [`margin`](./src/expanders/margin.ts)
