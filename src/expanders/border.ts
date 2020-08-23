@@ -15,7 +15,7 @@ export type BorderLonghands = BorderWidthLonghands &
 export function border(
 	width: NonNullable<CSSProperties["borderTopWidth"]>,
 	color: NonNullable<CSSProperties["borderTopColor"]> = "currentcolor",
-	style: NonNullable<CSSProperties["borderTopStyle"]> = "none",
+	style: NonNullable<CSSProperties["borderTopStyle"]> = "solid",
 ): BorderLonghands {
 	return {
 		...borderWidth(width),
