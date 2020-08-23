@@ -57,6 +57,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`borderRadius`](./src/expanders/borderRadius.ts)
 - [`borderStyle`](./src/expanders/borderStyle.ts)
 - [`borderWidth`](./src/expanders/borderWidth.ts)
+- [`columnRule`](./src/expanders/columnRule.ts)
 - [`flex`](./src/expanders/flex.ts)
 - [`flexFlow`](./src/expanders/flexFlow.ts)
 - [`gap`](./src/expanders/gap.ts)
@@ -87,4 +88,5 @@ The project adheres to the behavior of shorthands as [specified by _CSS Cascadin
 Parameters of expanders are in a fallback-oriented order to embrace [progressive enhancement](https://developer.mozilla.org/docs/Glossary/Progressive_Enhancement). Defaults are mostly identical to the initial values of sub-properties, except for:
 
 - `border` – Style defaults to `"solid"` (instead of `"none"`)
+- `columnRule` – Style defaults to `"solid"` (instead of `"none"`)
 - `outline` – Style defaults to `"solid"` (instead of `"none"`), and color defaults to `"currentcolor"` (instead of `["currentcolor", "invert"]`)
