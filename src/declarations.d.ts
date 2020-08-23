@@ -1,6 +1,11 @@
 declare module "css-shorthand-expanders" {
-	import type { PropertiesFallback } from "csstype";
+	import type { StandardLonghandPropertiesFallback } from "csstype";
 
-	// eslint-disable-next-line
-	interface CSSProperties extends PropertiesFallback<number | (string & {})> {}
+	// eslint-disable-next-line @typescript-eslint/no-empty-interface
+	interface CSSProperties
+		extends StandardLonghandPropertiesFallback<
+			| number
+			| (// eslint-disable-next-line @typescript-eslint/ban-types
+			  string & {})
+		> {}
 }
