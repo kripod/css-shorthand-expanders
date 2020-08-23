@@ -12,10 +12,10 @@ For shorthands with a single canonical value order, typed methods with positiona
 
 ## Usage
 
-Install the library with your package manager, e.g.:
+Install the library and its peer dependency with your package manager, e.g.:
 
 ```shell
-npm install css-shorthand-expanders
+npm install css-shorthand-expanders csstype
 ```
 
 After that, import transformation functions on demand:
@@ -31,6 +31,21 @@ console.assert(longhands.paddingLeft === longhands.paddingRight);
 ```
 
 By convention, [property names are camelCased](https://reactjs.org/docs/dom-elements.html#style) to be consistent with the CSSOM `style` property. Unused functions are tree-shaken away, saving on your bundle sizes.
+
+### Type checking
+
+Autocompletion and additional type safety can be enabled with a `.d.ts` file:
+
+```ts
+/* declarations.d.ts */
+
+declare module "css-shorthand-expanders" {
+  import type { StandardLonghandProperties } from "csstype";
+
+  // You may also use `StandardLonghandPropertiesFallback` and any type params
+  interface CSSProperties extends StandardLonghandProperties {}
+}
+```
 
 ### Reference
 
