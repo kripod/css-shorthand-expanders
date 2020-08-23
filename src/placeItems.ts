@@ -1,13 +1,12 @@
 import type { CSSProperties } from "css-shorthand-expanders";
 
-export type PlaceItemsLonghands = Pick<
-	CSSProperties,
-	"alignItems" | "justifyItems"
+export type PlaceItemsLonghands = Required<
+	Pick<CSSProperties, "alignItems" | "justifyItems">
 >;
 
 export function placeItems(
-	align: CSSProperties["alignItems"],
-	justify: CSSProperties["justifyItems"] = align,
+	align: NonNullable<CSSProperties["alignItems"]>,
+	justify: NonNullable<CSSProperties["justifyItems"]> = align,
 ): PlaceItemsLonghands {
 	return {
 		alignItems: align,

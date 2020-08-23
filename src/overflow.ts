@@ -1,10 +1,12 @@
 import type { CSSProperties } from "css-shorthand-expanders";
 
-export type OverflowLonghands = Pick<CSSProperties, "overflowX" | "overflowY">;
+export type OverflowLonghands = Required<
+	Pick<CSSProperties, "overflowX" | "overflowY">
+>;
 
 export function overflow(
-	x: CSSProperties["overflowX"],
-	y: CSSProperties["overflowY"] = x,
+	x: NonNullable<CSSProperties["overflowX"]>,
+	y: NonNullable<CSSProperties["overflowY"]> = x,
 ): OverflowLonghands {
 	return {
 		overflowX: x,

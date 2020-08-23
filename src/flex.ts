@@ -1,14 +1,13 @@
 import type { CSSProperties } from "css-shorthand-expanders";
 
-export type FlexLonghands = Pick<
-	CSSProperties,
-	"flexGrow" | "flexShrink" | "flexBasis"
+export type FlexLonghands = Required<
+	Pick<CSSProperties, "flexGrow" | "flexShrink" | "flexBasis">
 >;
 
 export function flex(
-	grow: CSSProperties["flexGrow"],
-	shrink: CSSProperties["flexShrink"] = 1,
-	basis: CSSProperties["flexBasis"] = 0,
+	grow: NonNullable<CSSProperties["flexGrow"]>,
+	shrink: NonNullable<CSSProperties["flexShrink"]> = 1,
+	basis: NonNullable<CSSProperties["flexBasis"]> = 0,
 ): FlexLonghands {
 	return {
 		flexGrow: grow,

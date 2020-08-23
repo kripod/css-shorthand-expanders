@@ -1,14 +1,13 @@
 import type { CSSProperties } from "css-shorthand-expanders";
 
-export type ListStyleLonghands = Pick<
-	CSSProperties,
-	"listStylePosition" | "listStyleImage" | "listStyleType"
+export type ListStyleLonghands = Required<
+	Pick<CSSProperties, "listStylePosition" | "listStyleImage" | "listStyleType">
 >;
 
 export function listStyle(
-	position: CSSProperties["listStylePosition"],
-	image: CSSProperties["listStyleImage"] = "none",
-	type: CSSProperties["listStyleType"] = "disc",
+	position: NonNullable<CSSProperties["listStylePosition"]>,
+	image: NonNullable<CSSProperties["listStyleImage"]> = "none",
+	type: NonNullable<CSSProperties["listStyleType"]> = "disc",
 ): ListStyleLonghands {
 	return {
 		listStylePosition: position,

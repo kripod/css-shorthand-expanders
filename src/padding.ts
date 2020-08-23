@@ -1,35 +1,39 @@
 import type { CSSProperties } from "css-shorthand-expanders";
 
-export type PaddingLonghands = Pick<
-	CSSProperties,
-	"paddingTop" | "paddingRight" | "paddingBottom" | "paddingLeft"
+export type PaddingLonghands = Required<
+	Pick<
+		CSSProperties,
+		"paddingTop" | "paddingRight" | "paddingBottom" | "paddingLeft"
+	>
 >;
 
-export function padding(all: CSSProperties["paddingTop"]): PaddingLonghands;
-
 export function padding(
-	vertical: CSSProperties["paddingTop"],
-	horizontal: CSSProperties["paddingRight"],
+	all: NonNullable<CSSProperties["paddingTop"]>,
 ): PaddingLonghands;
 
 export function padding(
-	top: CSSProperties["paddingTop"],
-	horizontal: CSSProperties["paddingRight"],
-	bottom: CSSProperties["paddingBottom"],
+	vertical: NonNullable<CSSProperties["paddingTop"]>,
+	horizontal: NonNullable<CSSProperties["paddingRight"]>,
 ): PaddingLonghands;
 
 export function padding(
-	top: CSSProperties["paddingTop"],
-	right: CSSProperties["paddingRight"],
-	bottom: CSSProperties["paddingBottom"],
-	left: CSSProperties["paddingLeft"],
+	top: NonNullable<CSSProperties["paddingTop"]>,
+	horizontal: NonNullable<CSSProperties["paddingRight"]>,
+	bottom: NonNullable<CSSProperties["paddingBottom"]>,
 ): PaddingLonghands;
 
 export function padding(
-	top: CSSProperties["paddingTop"],
-	right: CSSProperties["paddingRight"] = top,
-	bottom: CSSProperties["paddingBottom"] = top,
-	left: CSSProperties["paddingLeft"] = right,
+	top: NonNullable<CSSProperties["paddingTop"]>,
+	right: NonNullable<CSSProperties["paddingRight"]>,
+	bottom: NonNullable<CSSProperties["paddingBottom"]>,
+	left: NonNullable<CSSProperties["paddingLeft"]>,
+): PaddingLonghands;
+
+export function padding(
+	top: NonNullable<CSSProperties["paddingTop"]>,
+	right: NonNullable<CSSProperties["paddingRight"]> = top,
+	bottom: NonNullable<CSSProperties["paddingBottom"]> = top,
+	left: NonNullable<CSSProperties["paddingLeft"]> = right,
 ): PaddingLonghands {
 	return {
 		paddingTop: top,
