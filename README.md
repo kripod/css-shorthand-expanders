@@ -63,6 +63,8 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`flexFlow`](./src/expanders/flexFlow.ts)
 - [`gap`](./src/expanders/gap.ts)
 - [`gridArea`](./src/expanders/gridArea.ts)
+- [`gridColumn`](./src/expanders/gridColumn.ts)
+- [`gridRow`](./src/expanders/gridRow.ts)
 - [`inset`](./src/expanders/inset.ts)
 - [`lineClamp`](./src/expanders/lineClamp.ts)
 - [`listStyle`](./src/expanders/listStyle.ts)

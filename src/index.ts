@@ -12,6 +12,8 @@ export { flex } from "./expanders/flex";
 export { flexFlow } from "./expanders/flexFlow";
 export { gap } from "./expanders/gap";
 export { gridArea } from "./expanders/gridArea";
+export { gridColumn } from "./expanders/gridColumn";
+export { gridRow } from "./expanders/gridRow";
 export { inset } from "./expanders/inset";
 export { lineClamp } from "./expanders/lineClamp";
 export { listStyle } from "./expanders/listStyle";
