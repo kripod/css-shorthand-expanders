@@ -1,6 +1,6 @@
 import type { CSSProperties } from "../CSSProperties";
 
-export type OutlineLonghands = Required<
+export type TextDecorationLonghands = Required<
 	Pick<
 		CSSProperties,
 		| "textDecorationLine"
@@ -15,7 +15,7 @@ export function textDecoration(
 	color: NonNullable<CSSProperties["textDecorationColor"]> = "currentcolor",
 	style: NonNullable<CSSProperties["textDecorationStyle"]> = "solid",
 	thickness: NonNullable<CSSProperties["textDecorationThickness"]> = "auto",
-): OutlineLonghands {
+): TextDecorationLonghands {
 	return {
 		textDecorationLine: line,
 		textDecorationColor: color,
