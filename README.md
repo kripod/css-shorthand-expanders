@@ -51,22 +51,22 @@ declare module "css-shorthand-expanders" {
 
 Functions available are listed below in alphabetical order. Please refer to the bundled type definitions for their signatures and overloads.
 
-- [`border`](./src/border.ts)
-- [`borderColor`](./src/borderColor.ts)
-- [`borderImage`](./src/borderImage.ts)
-- [`borderStyle`](./src/borderStyle.ts)
-- [`borderWidth`](./src/borderWidth.ts)
-- [`flex`](./src/flex.ts)
-- [`flexFlow`](./src/flexFlow.ts)
-- [`gap`](./src/gap.ts)
-- [`lineClamp`](./src/lineClamp.ts)
-- [`listStyle`](./src/listStyle.ts)
-- [`margin`](./src/margin.ts)
-- [`overflow`](./src/overflow.ts)
-- [`padding`](./src/padding.ts)
-- [`placeContent`](./src/placeContent.ts)
-- [`placeItems`](./src/placeItems.ts)
-- [`placeSelf`](./src/placeSelf.ts)
+- [`border`](./src/expanders/border.ts)
+- [`borderColor`](./src/expanders/borderColor.ts)
+- [`borderImage`](./src/expanders/borderImage.ts)
+- [`borderStyle`](./src/expanders/borderStyle.ts)
+- [`borderWidth`](./src/expanders/borderWidth.ts)
+- [`flex`](./src/expanders/flex.ts)
+- [`flexFlow`](./src/expanders/flexFlow.ts)
+- [`gap`](./src/expanders/gap.ts)
+- [`lineClamp`](./src/expanders/lineClamp.ts)
+- [`listStyle`](./src/expanders/listStyle.ts)
+- [`margin`](./src/expanders/margin.ts)
+- [`overflow`](./src/expanders/overflow.ts)
+- [`padding`](./src/expanders/padding.ts)
+- [`placeContent`](./src/expanders/placeContent.ts)
+- [`placeItems`](./src/expanders/placeItems.ts)
+- [`placeSelf`](./src/expanders/placeSelf.ts)
 
 _More functions are under construction. Follow along for updates or [contribute](./CONTRIBUTING.md) to the project!_
 
