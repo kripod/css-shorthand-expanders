@@ -1,40 +1,42 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "css-shorthand-expanders";
 
-export type BorderColorLonghands = Pick<
-	CSSProperties,
-	| "borderTopColor"
-	| "borderRightColor"
-	| "borderBottomColor"
-	| "borderLeftColor"
+export type BorderColorLonghands = Required<
+	Pick<
+		CSSProperties,
+		| "borderTopColor"
+		| "borderRightColor"
+		| "borderBottomColor"
+		| "borderLeftColor"
+	>
 >;
 
 export function borderColor(
-	all: CSSProperties["borderTopColor"],
+	all: NonNullable<CSSProperties["borderTopColor"]>,
 ): BorderColorLonghands;
 
 export function borderColor(
-	vertical: CSSProperties["borderTopColor"],
-	horizontal: CSSProperties["borderRightColor"],
+	vertical: NonNullable<CSSProperties["borderTopColor"]>,
+	horizontal: NonNullable<CSSProperties["borderRightColor"]>,
 ): BorderColorLonghands;
 
 export function borderColor(
-	top: CSSProperties["borderTopColor"],
-	horizontal: CSSProperties["borderRightColor"],
-	bottom: CSSProperties["borderBottomColor"],
+	top: NonNullable<CSSProperties["borderTopColor"]>,
+	horizontal: NonNullable<CSSProperties["borderRightColor"]>,
+	bottom: NonNullable<CSSProperties["borderBottomColor"]>,
 ): BorderColorLonghands;
 
 export function borderColor(
-	top: CSSProperties["borderTopColor"],
-	right: CSSProperties["borderRightColor"],
-	bottom: CSSProperties["borderBottomColor"],
-	left: CSSProperties["borderLeftColor"],
+	top: NonNullable<CSSProperties["borderTopColor"]>,
+	right: NonNullable<CSSProperties["borderRightColor"]>,
+	bottom: NonNullable<CSSProperties["borderBottomColor"]>,
+	left: NonNullable<CSSProperties["borderLeftColor"]>,
 ): BorderColorLonghands;
 
 export function borderColor(
-	top: CSSProperties["borderTopColor"],
-	right: CSSProperties["borderRightColor"] = top,
-	bottom: CSSProperties["borderBottomColor"] = top,
-	left: CSSProperties["borderLeftColor"] = right,
+	top: NonNullable<CSSProperties["borderTopColor"]>,
+	right: NonNullable<CSSProperties["borderRightColor"]> = top,
+	bottom: NonNullable<CSSProperties["borderBottomColor"]> = top,
+	left: NonNullable<CSSProperties["borderLeftColor"]> = right,
 ): BorderColorLonghands {
 	return {
 		borderTopColor: top,

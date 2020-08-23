@@ -1,40 +1,42 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "css-shorthand-expanders";
 
-export type BorderWidthLonghands = Pick<
-	CSSProperties,
-	| "borderTopWidth"
-	| "borderRightWidth"
-	| "borderBottomWidth"
-	| "borderLeftWidth"
+export type BorderWidthLonghands = Required<
+	Pick<
+		CSSProperties,
+		| "borderTopWidth"
+		| "borderRightWidth"
+		| "borderBottomWidth"
+		| "borderLeftWidth"
+	>
 >;
 
 export function borderWidth(
-	all: CSSProperties["borderTopWidth"],
+	all: NonNullable<CSSProperties["borderTopWidth"]>,
 ): BorderWidthLonghands;
 
 export function borderWidth(
-	vertical: CSSProperties["borderTopWidth"],
-	horizontal: CSSProperties["borderRightWidth"],
+	vertical: NonNullable<CSSProperties["borderTopWidth"]>,
+	horizontal: NonNullable<CSSProperties["borderRightWidth"]>,
 ): BorderWidthLonghands;
 
 export function borderWidth(
-	top: CSSProperties["borderTopWidth"],
-	horizontal: CSSProperties["borderRightWidth"],
-	bottom: CSSProperties["borderBottomWidth"],
+	top: NonNullable<CSSProperties["borderTopWidth"]>,
+	horizontal: NonNullable<CSSProperties["borderRightWidth"]>,
+	bottom: NonNullable<CSSProperties["borderBottomWidth"]>,
 ): BorderWidthLonghands;
 
 export function borderWidth(
-	top: CSSProperties["borderTopWidth"],
-	right: CSSProperties["borderRightWidth"],
-	bottom: CSSProperties["borderBottomWidth"],
-	left: CSSProperties["borderLeftWidth"],
+	top: NonNullable<CSSProperties["borderTopWidth"]>,
+	right: NonNullable<CSSProperties["borderRightWidth"]>,
+	bottom: NonNullable<CSSProperties["borderBottomWidth"]>,
+	left: NonNullable<CSSProperties["borderLeftWidth"]>,
 ): BorderWidthLonghands;
 
 export function borderWidth(
-	top: CSSProperties["borderTopWidth"],
-	right: CSSProperties["borderRightWidth"] = top,
-	bottom: CSSProperties["borderBottomWidth"] = top,
-	left: CSSProperties["borderLeftWidth"] = right,
+	top: NonNullable<CSSProperties["borderTopWidth"]>,
+	right: NonNullable<CSSProperties["borderRightWidth"]> = top,
+	bottom: NonNullable<CSSProperties["borderBottomWidth"]> = top,
+	left: NonNullable<CSSProperties["borderLeftWidth"]> = right,
 ): BorderWidthLonghands {
 	return {
 		borderTopWidth: top,

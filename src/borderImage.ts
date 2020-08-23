@@ -1,4 +1,6 @@
-import type { CSSProperties, CSSPropertiesWithValues } from "./CSSProperties";
+import type { CSSProperties } from "css-shorthand-expanders";
+
+import type { CSSPropertiesWithValues } from "./CSSProperties";
 
 export type BorderImageLonghandsWithInitialValues = CSSPropertiesWithValues<{
 	borderImageSource: "none";
@@ -8,17 +10,16 @@ export type BorderImageLonghandsWithInitialValues = CSSPropertiesWithValues<{
 	borderImageRepeat: "stretch";
 }>;
 
-export type BorderImageLonghands = Pick<
-	CSSProperties,
-	keyof BorderImageLonghandsWithInitialValues
+export type BorderImageLonghands = Required<
+	Pick<CSSProperties, keyof BorderImageLonghandsWithInitialValues>
 >;
 
 export function borderImage(
-	source: CSSProperties["borderImageSource"],
-	slice: CSSProperties["borderImageSlice"] = "100%",
-	width: CSSProperties["borderImageWidth"] = 1,
-	outset: CSSProperties["borderImageOutset"] = 0,
-	repeat: CSSProperties["borderImageRepeat"] = "stretch",
+	source: NonNullable<CSSProperties["borderImageSource"]>,
+	slice: NonNullable<CSSProperties["borderImageSlice"]> = "100%",
+	width: NonNullable<CSSProperties["borderImageWidth"]> = 1,
+	outset: NonNullable<CSSProperties["borderImageOutset"]> = 0,
+	repeat: NonNullable<CSSProperties["borderImageRepeat"]> = "stretch",
 ): BorderImageLonghands {
 	return {
 		borderImageSource: source,

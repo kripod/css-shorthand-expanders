@@ -1,3 +1,5 @@
+import type { CSSProperties } from "css-shorthand-expanders";
+
 import { borderColor, BorderColorLonghands } from "./borderColor";
 import {
 	borderImage,
@@ -5,7 +7,6 @@ import {
 } from "./borderImage";
 import { borderStyle, BorderStyleLonghands } from "./borderStyle";
 import { borderWidth, BorderWidthLonghands } from "./borderWidth";
-import type { CSSProperties } from "./CSSProperties";
 
 export type BorderLonghands = BorderWidthLonghands &
 	BorderStyleLonghands &
@@ -13,9 +14,9 @@ export type BorderLonghands = BorderWidthLonghands &
 	BorderImageLonghandsWithInitialValues;
 
 export function border(
-	width: CSSProperties["borderTopWidth"],
-	style: CSSProperties["borderTopStyle"] = "none",
-	color: CSSProperties["borderTopColor"] = "currentcolor",
+	width: NonNullable<CSSProperties["borderTopWidth"]>,
+	style: NonNullable<CSSProperties["borderTopStyle"]> = "none",
+	color: NonNullable<CSSProperties["borderTopColor"]> = "currentcolor",
 ): BorderLonghands {
 	return {
 		...borderWidth(width),

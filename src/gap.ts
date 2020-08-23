@@ -1,4 +1,4 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "css-shorthand-expanders";
 
 export type GapLonghands = Pick<CSSProperties, "rowGap" | "columnGap">;
 

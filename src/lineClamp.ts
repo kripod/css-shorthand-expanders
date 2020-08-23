@@ -1,15 +1,16 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "css-shorthand-expanders";
 
-export type LineClampLonghands = Pick<
-	CSSProperties,
-	"maxLines" | "blockEllipsis"
-> & /* TODO: Wrap inside `ConstantValuedCSSProperties` (frenic/csstype#111) */ {
+/* TODO: Replace "blockOverflow" with "blockEllipsis" (frenic/csstype#94) */
+
+export type LineClampLonghands = Required<Pick<CSSProperties, "maxLines">> & {
+	blockEllipsis: CSSProperties["blockOverflow"];
+} & /* TODO: Wrap inside `ConstantValuedCSSProperties` (frenic/csstype#111) */ {
 	continue: "discard";
 };
 
 export function lineClamp(
-	maxLines: CSSProperties["maxLines"],
-	blockEllipsis: CSSProperties["blockEllipsis"] = "auto",
+	maxLines: NonNullable<CSSProperties["maxLines"]>,
+	blockEllipsis: NonNullable<CSSProperties["blockOverflow"]> = "auto",
 ): LineClampLonghands {
 	return {
 		maxLines,
