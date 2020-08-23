@@ -1,4 +1,4 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "../CSSProperties";
 
 export type GapLonghands = Required<
 	Pick<CSSProperties, "rowGap" | "columnGap">

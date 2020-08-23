@@ -1,4 +1,4 @@
-import type { CSSProperties, CSSPropertiesWithValues } from "./CSSProperties";
+import type { CSSProperties, CSSPropertiesWithValues } from "../CSSProperties";
 
 export type BorderImageLonghandsWithInitialValues = CSSPropertiesWithValues<{
 	borderImageSource: "none";

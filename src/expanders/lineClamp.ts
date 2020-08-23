@@ -1,4 +1,4 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "../CSSProperties";
 
 /* TODO: Replace "blockOverflow" with "blockEllipsis" (frenic/csstype#94) */
 

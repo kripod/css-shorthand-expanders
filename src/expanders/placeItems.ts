@@ -1,4 +1,4 @@
-import type { CSSProperties } from "./CSSProperties";
+import type { CSSProperties } from "../CSSProperties";
 
 export type PlaceItemsLonghands = Required<
 	Pick<CSSProperties, "alignItems" | "justifyItems">

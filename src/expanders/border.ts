@@ -1,3 +1,4 @@
+import type { CSSProperties } from "../CSSProperties";
 import { borderColor, BorderColorLonghands } from "./borderColor";
 import {
 	borderImage,
@@ -5,7 +6,6 @@ import {
 } from "./borderImage";
 import { borderStyle, BorderStyleLonghands } from "./borderStyle";
 import { borderWidth, BorderWidthLonghands } from "./borderWidth";
-import type { CSSProperties } from "./CSSProperties";
 
 export type BorderLonghands = BorderWidthLonghands &
 	BorderStyleLonghands &
