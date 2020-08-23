@@ -54,6 +54,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`border`](./src/expanders/border.ts)
 - [`borderColor`](./src/expanders/borderColor.ts)
 - [`borderImage`](./src/expanders/borderImage.ts)
+- [`borderRadius`](./src/expanders/borderRadius.ts)
 - [`borderStyle`](./src/expanders/borderStyle.ts)
 - [`borderWidth`](./src/expanders/borderWidth.ts)
 - [`flex`](./src/expanders/flex.ts)

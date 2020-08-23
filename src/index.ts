@@ -3,6 +3,7 @@ export type { CSSProperties } from "./CSSProperties";
 export { border } from "./expanders/border";
 export { borderColor } from "./expanders/borderColor";
 export { borderImage } from "./expanders/borderImage";
+export { borderRadius } from "./expanders/borderRadius";
 export { borderStyle } from "./expanders/borderStyle";
 export { borderWidth } from "./expanders/borderWidth";
 export { flex } from "./expanders/flex";
