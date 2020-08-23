@@ -1,4 +1,4 @@
-export type { CSSProperties } from "css-shorthand-expanders";
+export type { CSSProperties } from "./CSSProperties";
 
 export { border } from "./border";
 export { borderColor } from "./borderColor";
