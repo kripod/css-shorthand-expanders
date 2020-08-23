@@ -34,7 +34,7 @@ By convention, [property names are camelCased](https://reactjs.org/docs/dom-elem
 
 ### Type checking
 
-Autocompletion and additional type safety can be enabled with a `.d.ts` file:
+Parameter suggestions and accurate return types can be enabled with a `.d.ts` file:
 
 ```ts
 /* declarations.d.ts */
