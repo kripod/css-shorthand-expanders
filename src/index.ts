@@ -7,6 +7,7 @@ export { borderRadius } from "./expanders/borderRadius";
 export { borderStyle } from "./expanders/borderStyle";
 export { borderWidth } from "./expanders/borderWidth";
 export { columnRule } from "./expanders/columnRule";
+export { columns } from "./expanders/columns";
 export { flex } from "./expanders/flex";
 export { flexFlow } from "./expanders/flexFlow";
 export { gap } from "./expanders/gap";

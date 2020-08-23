@@ -58,6 +58,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`borderStyle`](./src/expanders/borderStyle.ts)
 - [`borderWidth`](./src/expanders/borderWidth.ts)
 - [`columnRule`](./src/expanders/columnRule.ts)
+- [`columns`](./src/expanders/columns.ts)
 - [`flex`](./src/expanders/flex.ts)
 - [`flexFlow`](./src/expanders/flexFlow.ts)
 - [`gap`](./src/expanders/gap.ts)
