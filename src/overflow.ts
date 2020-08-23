@@ -1,9 +1,11 @@
 import type { CSSProperties } from "./CSSProperties";
 
+export type OverflowLonghands = Pick<CSSProperties, "overflowX" | "overflowY">;
+
 export function overflow(
 	x: CSSProperties["overflowX"],
 	y: CSSProperties["overflowY"] = x,
-): Pick<CSSProperties, "overflowX" | "overflowY"> {
+): OverflowLonghands {
 	return {
 		overflowX: x,
 		overflowY: y,

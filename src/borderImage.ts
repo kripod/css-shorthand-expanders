@@ -8,20 +8,18 @@ export type BorderImageLonghandsWithInitialValues = CSSPropertiesWithValues<{
 	borderImageRepeat: "stretch";
 }>;
 
+export type BorderImageLonghands = Pick<
+	CSSProperties,
+	keyof BorderImageLonghandsWithInitialValues
+>;
+
 export function borderImage(
 	source: CSSProperties["borderImageSource"],
 	slice: CSSProperties["borderImageSlice"] = "100%",
 	width: CSSProperties["borderImageWidth"] = 1,
 	outset: CSSProperties["borderImageOutset"] = 0,
 	repeat: CSSProperties["borderImageRepeat"] = "stretch",
-): Pick<
-	CSSProperties,
-	| "borderImageSource"
-	| "borderImageSlice"
-	| "borderImageWidth"
-	| "borderImageOutset"
-	| "borderImageRepeat"
-> {
+): BorderImageLonghands {
 	return {
 		borderImageSource: source,
 		borderImageSlice: slice,

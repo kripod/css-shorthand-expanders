@@ -1,12 +1,16 @@
 import type { CSSProperties } from "./CSSProperties";
 
+export type LineClampLonghands = Pick<
+	CSSProperties,
+	"maxLines" | "blockEllipsis"
+> & /* TODO: Wrap inside `ConstantValuedCSSProperties` (frenic/csstype#111) */ {
+	continue: "discard";
+};
+
 export function lineClamp(
 	maxLines: CSSProperties["maxLines"],
 	blockEllipsis: CSSProperties["blockEllipsis"] = "auto",
-): Pick<CSSProperties, "maxLines" | "blockEllipsis"> & {
-	/* TODO: Wrap inside `ConstantValuedCSSProperties` */
-	continue: "discard";
-} {
+): LineClampLonghands {
 	return {
 		maxLines,
 		blockEllipsis,

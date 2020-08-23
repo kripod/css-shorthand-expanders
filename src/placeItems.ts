@@ -1,9 +1,14 @@
 import type { CSSProperties } from "./CSSProperties";
 
+export type PlaceItemsLonghands = Pick<
+	CSSProperties,
+	"alignItems" | "justifyItems"
+>;
+
 export function placeItems(
 	align: CSSProperties["alignItems"],
 	justify: CSSProperties["justifyItems"] = align,
-): Pick<CSSProperties, "alignItems" | "justifyItems"> {
+): PlaceItemsLonghands {
 	return {
 		alignItems: align,
 		justifyItems: justify,

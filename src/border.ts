@@ -7,14 +7,16 @@ import { borderStyle, BorderStyleLonghands } from "./borderStyle";
 import { borderWidth, BorderWidthLonghands } from "./borderWidth";
 import type { CSSProperties } from "./CSSProperties";
 
+export type BorderLonghands = BorderWidthLonghands &
+	BorderStyleLonghands &
+	BorderColorLonghands &
+	BorderImageLonghandsWithInitialValues;
+
 export function border(
 	width: CSSProperties["borderTopWidth"],
 	style: CSSProperties["borderTopStyle"] = "none",
 	color: CSSProperties["borderTopColor"] = "currentcolor",
-): BorderWidthLonghands &
-	BorderStyleLonghands &
-	BorderColorLonghands &
-	BorderImageLonghandsWithInitialValues {
+): BorderLonghands {
 	return {
 		...borderWidth(width),
 		...borderStyle(style),
