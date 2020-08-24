@@ -2,6 +2,10 @@
 
 Type-safe functions to expand CSS shorthands into their longhand sub-properties.
 
+[![npm](https://img.shields.io/npm/v/css-shorthand-expanders)](https://www.npmjs.com/package/css-shorthand-expanders)
+[![Travis (.com)](https://img.shields.io/travis/com/kripod/css-shorthand-expanders)](https://travis-ci.com/github/kripod/css-shorthand-expanders)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](./CODE_OF_CONDUCT.md)
+
 ## Motivation
 
 CSS rules can be represented as plain JavaScript objects. While every property [has a type definition](https://github.com/frenic/csstype), longhands offer autocompletion superior to shorthands.
@@ -9,6 +13,8 @@ CSS rules can be represented as plain JavaScript objects. While every property [
 Usually, sub-properties of a shorthand may be specified in any order. This imposes an overhead on developers and type systems alike. Consequently, shorthands without a fixed order syntax should be avoided.
 
 For shorthands with a reasonable value order, typed methods with positional arguments can be defined. This project aims to provide those in the form of self-contained functions.
+
+The main goal is to **support atomic CSS-in-JS libraries** which can't handle shorthands.
 
 ## Usage
 
