@@ -17,10 +17,10 @@ export function border(
 	color: NonNullable<CSSProperties["borderTopColor"]> = "currentcolor",
 	style: NonNullable<CSSProperties["borderTopStyle"]> = "solid",
 ): BorderLonghands {
-	return {
-		...borderWidth(width),
-		...borderColor(color),
-		...borderStyle(style),
-		...(borderImage("none") as BorderImageLonghandsWithInitialValues),
-	};
+	return Object.assign(
+		borderWidth(width),
+		borderColor(color),
+		borderStyle(style),
+		borderImage("none") as BorderImageLonghandsWithInitialValues,
+	);
 }
