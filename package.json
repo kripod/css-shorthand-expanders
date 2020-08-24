@@ -41,7 +41,7 @@
 	},
 	"lint-staged": {
 		"*.{ts,js,json,yml,md}": "prettier --write",
-		"*.{ts,js}": "eslint --cache --fix"
+		"*.{ts,js}": "eslint --fix"
 	},
 	"config": {
 		"commitizen": {
