@@ -13,19 +13,30 @@
 	"repository": "kripod/css-shorthand-expanders",
 	"license": "MIT",
 	"author": "Kristóf Poduszló <kripod@protonmail.com>",
-	"main": "./dist/cjs/index.js",
+	"sideEffects": false,
+	"exports": {
+		"import": "./dist/esm/bundle.min.mjs",
+		"require": "./dist/cjs/bundle.min.js"
+	},
+	"main": "./dist/cjs/bundle.min.js",
+	"module": "./dist/esm/bundle.min.mjs",
 	"scripts": {
+		"build": "rollup --config --sourcemap",
+		"clean": "git clean -fdx -e node_modules",
 		"format": "prettier --ignore-path .gitignore --write .",
 		"lint": "eslint --ignore-path .gitignore --ext .js,.ts ."
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^3.10.0",
 		"@typescript-eslint/parser": "^3.10.0",
+		"@wessberg/rollup-plugin-ts": "^1.3.3",
 		"csstype": "^3.0.2",
 		"eslint": "^7.7.0",
 		"eslint-config-prettier": "^6.11.0",
 		"eslint-plugin-simple-import-sort": "^5.0.3",
 		"prettier": "^2.1.0",
+		"rollup": "^2.26.5",
+		"rollup-plugin-terser": "^7.0.0",
 		"typescript": "^4.0.2"
 	},
 	"peerDependencies": {

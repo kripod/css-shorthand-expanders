@@ -1,6 +1,11 @@
 {
 	"compilerOptions": {
 		"strict": true,
-		"importsNotUsedAsValues": "error"
+		"forceConsistentCasingInFileNames": true,
+		"importsNotUsedAsValues": "error",
+		"target": "ES2017",
+		"isolatedModules": true,
+		"declaration": true,
+		"declarationMap": true
 	}
 }
