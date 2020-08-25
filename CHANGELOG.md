@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.4...v1.0.6) (2020-08-25)
+
+### Refactors
+
+- simplify constant-valued return types ([6e18916](https://github.com/kripod/css-shorthand-expanders/commit/6e18916a57390b63131c0b6401c2041906115e37))
+
 ### [1.0.5](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.4...v1.0.5) (2020-08-25)
 
 ### Refactors
