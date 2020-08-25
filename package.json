@@ -75,5 +75,10 @@
 	},
 	"peerDependencies": {
 		"csstype": ">=3"
+	},
+	"dependenciesMeta": {
+		"csstype": {
+			"optional": true
+		}
 	}
 }
