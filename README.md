@@ -45,9 +45,9 @@ Parameter suggestions and accurate return types can be enabled with a `.d.ts` fi
 ```ts
 /* declarations.d.ts */
 
-declare module "css-shorthand-expanders" {
-  import type { StandardLonghandProperties } from "csstype";
+import type { StandardLonghandProperties } from "csstype";
 
+declare module "css-shorthand-expanders" {
   // You may also use `StandardLonghandPropertiesFallback` and any type params
   interface CSSProperties extends StandardLonghandProperties {}
 }
