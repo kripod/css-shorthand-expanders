@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.0...v1.0.1) (2020-08-25)
+
+### Bug Fixes
+
+- add missing files, including type definitions ([cd6102d](https://github.com/kripod/css-shorthand-expanders/commit/cd6102df424eee8a2955706a6dd9929a36498fe1))
+
 ## 1.0.0 (2020-08-24)
 
 ### Features
