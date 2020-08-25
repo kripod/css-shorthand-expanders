@@ -18,10 +18,10 @@ The main goal is to **support atomic CSS-in-JS libraries** which can't handle sh
 
 ## Usage
 
-Install the library and its peer dependency with a package manager, e.g. npm:
+Install the library with a package manager, e.g. npm:
 
 ```shell
-npm install css-shorthand-expanders csstype
+npm install css-shorthand-expanders
 ```
 
 After that, import transformation functions on demand:
@@ -45,6 +45,7 @@ Parameter suggestions and accurate return types can be enabled with a `.d.ts` fi
 ```ts
 /* declarations.d.ts */
 
+// Make sure to install the optional peer dependency below
 import type { StandardLonghandProperties } from "csstype";
 
 declare module "css-shorthand-expanders" {
