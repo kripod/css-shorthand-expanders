@@ -4,6 +4,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"importsNotUsedAsValues": "error",
 		"target": "ES2017",
+		"moduleResolution": "Node",
 		"isolatedModules": true,
 		"declaration": true,
 		"declarationMap": true
