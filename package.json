@@ -1,6 +1,6 @@
 {
 	"name": "css-shorthand-expanders",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Type-safe functions to expand CSS shorthands into their longhand sub-properties",
 	"keywords": [
 		"css",
