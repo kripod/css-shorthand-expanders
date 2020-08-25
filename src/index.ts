@@ -1,5 +1,3 @@
-export type { CSSProperties } from "./CSSProperties";
-
 export { border } from "./expanders/border";
 export { borderColor } from "./expanders/borderColor";
 export { borderImage } from "./expanders/borderImage";
@@ -27,3 +25,5 @@ export { placeSelf } from "./expanders/placeSelf";
 export { textDecoration } from "./expanders/textDecoration";
 export { textEmphasis } from "./expanders/textEmphasis";
 export { transition } from "./expanders/transition";
+
+export type { CSSProperties } from "./CSSProperties";
