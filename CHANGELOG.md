@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.4](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.3...v1.0.4) (2020-08-25)
 
+### Refactors
+
+- **deps:** make 'csstype' optional ([f313d19](https://github.com/kripod/css-shorthand-expanders/commit/f313d191ccddc64b05ac79f090003e9b6e904ddb))
+- improve constant-valued return types ([77be52c](https://github.com/kripod/css-shorthand-expanders/commit/77be52c15afefd99689fdc1b218f8b25b13fdc56))
+
 ### [1.0.3](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.2...v1.0.3) (2020-08-25)
+
+### Documentation
+
+- fix type checking instructions ([97e3465](https://github.com/kripod/css-shorthand-expanders/commit/97e3465cc4e5e44247bb7d79264cb41658b5adc3))
 
 ### [1.0.2](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.1...v1.0.2) (2020-08-25)
 
