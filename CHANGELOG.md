@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.5](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.4...v1.0.5) (2020-08-25)
 
+### Refactors
+
+- **deps:** allow using any 'csstype' version ([465dd36](https://github.com/kripod/css-shorthand-expanders/commit/465dd36d2b6c213613625deae9a05d07d100a474))
+
 ### [1.0.4](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.3...v1.0.4) (2020-08-25)
 
 ### Refactors
