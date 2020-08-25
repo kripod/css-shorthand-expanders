@@ -3,11 +3,9 @@ export interface CSSProperties {
 	[key: string]: any;
 }
 
-export type CSSPropertiesWithValues<T extends CSSProperties> =
-	// Retain the passed type
-	T &
-		// Inherit JSDoc from `CSSProperties`
-		Pick<
-			{ [P in keyof CSSProperties]-?: unknown },
-			Extract<keyof T, keyof CSSProperties>
-		>;
+export type CSSPropertiesWithValues<T extends CSSProperties> = {
+	[P in keyof Pick<
+		CSSProperties, // Inherits JSDoc comments when available
+		Extract<keyof T, keyof CSSProperties>
+	>]-?: T[P];
+};
