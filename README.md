@@ -58,6 +58,7 @@ declare module "css-shorthand-expanders" {
 
 Functions available are listed below in alphabetical order. Please refer to the bundled type definitions for their signatures and overloads.
 
+- [`animation`](./src/expanders/animation.ts)
 - [`border`](./src/expanders/border.ts)
 - [`borderColor`](./src/expanders/borderColor.ts)
 - [`borderImage`](./src/expanders/borderImage.ts)
@@ -98,6 +99,7 @@ The project adheres to the behavior of shorthands as [specified by _CSS Cascadin
 
 Parameters of expanders are in a fallback-oriented order to embrace [progressive enhancement](https://developer.mozilla.org/docs/Glossary/Progressive_Enhancement). Defaults are mostly identical to the initial values of sub-properties, except for:
 
+- `animation` – Iteration count defaults to `"infinite"` (instead of `1`)
 - `border` – Style defaults to `"solid"` (instead of `"none"`)
 - `columnRule` – Style defaults to `"solid"` (instead of `"none"`)
 - `outline` – Style defaults to `"solid"` (instead of `"none"`), and color defaults to `"currentcolor"` (instead of `["currentcolor", "invert"]`)

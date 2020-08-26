@@ -1,3 +1,4 @@
+export { animation } from "./expanders/animation";
 export { border } from "./expanders/border";
 export { borderColor } from "./expanders/borderColor";
 export { borderImage } from "./expanders/borderImage";
