@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.6...v1.1.0) (2020-08-26)
+
+### Features
+
+- add 'animation' expander ([886fad3](https://github.com/kripod/css-shorthand-expanders/commit/886fad391a48adce357394e3c1ba333de15da42f))
+- add physical border direction expanders ([9f0e641](https://github.com/kripod/css-shorthand-expanders/commit/9f0e64196c586f7b8a762443ac3525855d582196))
+
 ### [1.0.6](https://github.com/kripod/css-shorthand-expanders/compare/v1.0.4...v1.0.6) (2020-08-25)
 
 ### Refactors
