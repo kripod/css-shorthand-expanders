@@ -73,6 +73,7 @@ Functions available are listed below in alphabetical order. Please refer to the 
 - [`columns`](./src/expanders/columns.ts)
 - [`flex`](./src/expanders/flex.ts)
 - [`flexFlow`](./src/expanders/flexFlow.ts)
+- [`font`](./src/expanders/font.ts)
 - [`gap`](./src/expanders/gap.ts)
 - [`gridArea`](./src/expanders/gridArea.ts)
 - [`gridColumn`](./src/expanders/gridColumn.ts)
@@ -106,4 +107,5 @@ Parameters of expanders are in a fallback-oriented order to embrace [progressive
 - `animation` – Iteration count defaults to `"infinite"` (instead of `1`)
 - `border*` – Style defaults to `"solid"` (instead of `"none"`)
 - `columnRule` – Style defaults to `"solid"` (instead of `"none"`)
+- `font` – Size defaults to `"1rem"` (instead of `"medium"`)
 - `outline` – Style defaults to `"solid"` (instead of `"none"`), and color defaults to `"currentcolor"` (instead of `["currentcolor", "invert"]`)

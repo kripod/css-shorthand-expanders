@@ -13,6 +13,7 @@ export { columnRule } from "./expanders/columnRule";
 export { columns } from "./expanders/columns";
 export { flex } from "./expanders/flex";
 export { flexFlow } from "./expanders/flexFlow";
+export { font } from "./expanders/font";
 export { gap } from "./expanders/gap";
 export { gridArea } from "./expanders/gridArea";
 export { gridColumn } from "./expanders/gridColumn";
