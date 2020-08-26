@@ -11,7 +11,7 @@ export type TransitionLonghands = Required<
 >;
 
 export function transition(
-	properties: NonNullable<CSSProperties["transitionProperty"]>,
+	property: NonNullable<CSSProperties["transitionProperty"]>,
 	duration: NonNullable<CSSProperties["transitionDuration"]>,
 	timingFunction: NonNullable<
 		CSSProperties["transitionTimingFunction"]
@@ -19,7 +19,7 @@ export function transition(
 	delay: NonNullable<CSSProperties["transitionDelay"]> = "0s",
 ): TransitionLonghands {
 	return {
-		transitionProperty: properties,
+		transitionProperty: property,
 		transitionDuration: duration,
 		transitionTimingFunction: timingFunction,
 		transitionDelay: delay,
