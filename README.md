@@ -60,10 +60,14 @@ Functions available are listed below in alphabetical order. Please refer to the 
 
 - [`animation`](./src/expanders/animation.ts)
 - [`border`](./src/expanders/border.ts)
+- [`borderBottom`](./src/expanders/borderBottom.ts)
 - [`borderColor`](./src/expanders/borderColor.ts)
 - [`borderImage`](./src/expanders/borderImage.ts)
+- [`borderLeft`](./src/expanders/borderLeft.ts)
 - [`borderRadius`](./src/expanders/borderRadius.ts)
+- [`borderRight`](./src/expanders/borderRight.ts)
 - [`borderStyle`](./src/expanders/borderStyle.ts)
+- [`borderTop`](./src/expanders/borderTop.ts)
 - [`borderWidth`](./src/expanders/borderWidth.ts)
 - [`columnRule`](./src/expanders/columnRule.ts)
 - [`columns`](./src/expanders/columns.ts)
@@ -100,6 +104,6 @@ The project adheres to the behavior of shorthands as [specified by _CSS Cascadin
 Parameters of expanders are in a fallback-oriented order to embrace [progressive enhancement](https://developer.mozilla.org/docs/Glossary/Progressive_Enhancement). Defaults are mostly identical to the initial values of sub-properties, except for:
 
 - `animation` – Iteration count defaults to `"infinite"` (instead of `1`)
-- `border` – Style defaults to `"solid"` (instead of `"none"`)
+- `border*` – Style defaults to `"solid"` (instead of `"none"`)
 - `columnRule` – Style defaults to `"solid"` (instead of `"none"`)
 - `outline` – Style defaults to `"solid"` (instead of `"none"`), and color defaults to `"currentcolor"` (instead of `["currentcolor", "invert"]`)

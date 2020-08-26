@@ -1,9 +1,13 @@
 export { animation } from "./expanders/animation";
 export { border } from "./expanders/border";
+export { borderBottom } from "./expanders/borderBottom";
 export { borderColor } from "./expanders/borderColor";
 export { borderImage } from "./expanders/borderImage";
+export { borderLeft } from "./expanders/borderLeft";
 export { borderRadius } from "./expanders/borderRadius";
+export { borderRight } from "./expanders/borderRight";
 export { borderStyle } from "./expanders/borderStyle";
+export { borderTop } from "./expanders/borderTop";
 export { borderWidth } from "./expanders/borderWidth";
 export { columnRule } from "./expanders/columnRule";
 export { columns } from "./expanders/columns";
